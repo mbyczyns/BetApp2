@@ -91,3 +91,8 @@ Get help: [TBD-support](TBD-support-link) &bull; [Review the GitHub status page]
 &copy; 2023 TBD-copyright-holder &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
 </footer>
+
+
+EDIT:
+
+I decided to make my project in Java. My idea is to create a simple app, which simulates online bookmakers, where you can bet results in sport matches. Initially the "basic" sport you bet on is a diceroll (e.g. you can make a bet that the result would be less than 3). The user would have a certain amount of money, which he could bet, and he obviously can win more, if he manages to bet correctly. There would also be an option to log in as administrator, so that you can edit and add sports that you can bet on.
