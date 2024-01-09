@@ -1,3 +1,5 @@
+package User;
+
 public class User implements UserInterface {
     private int userID;
     private String username;
@@ -17,7 +19,7 @@ public class User implements UserInterface {
     public boolean login(String givenUsername, String givenPassword) {
         if (givenUsername.equals(this.username) && givenPassword.equals(this.password)){
             this.isLogged = true;
-            System.out.println("User logged in succesfully!");
+            System.out.println("User.User logged in succesfully!");
             return true;
         }
         else{

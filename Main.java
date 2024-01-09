@@ -1,3 +1,5 @@
+import User.User;
+
 import java.util.Scanner;
 
 public class Main {
