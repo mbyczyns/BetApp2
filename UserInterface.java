@@ -1,12 +1,18 @@
 public interface UserInterface {
-    void login();
+    boolean login(String username,String password);
 
     void logout();
 
-    void getUserInfo();
+    int getWallet();
 
-    void addMoney();
+    void addMoney(int amount);
 
-    void cashOut();
+    void cashOut(int amount);
+
+    String getUsername();
+
+    String getPassword();
+
+    boolean getisLogged();
 
 }
