@@ -33,11 +33,15 @@ public class FootballMatch extends AbstractDiscipline implements DisciplinesInte
         return teamAgoals;
     }
 
-    public boolean getTeamAgoals(int teamAgoals, int teamBgoals) {
+    public int getTeamBgoals() {
+        return teamBgoals;
+    }
+
+    public boolean winA(int teamAgoals, int teamBgoals) {
         return (teamBgoals < teamAgoals);
     }
 
-    public boolean getTeamBgoals(int teamAgoals, int teamBgoals) {
+    public boolean winB(int teamAgoals, int teamBgoals) {
         return (teamBgoals > teamAgoals);
     }
 
