@@ -19,7 +19,7 @@ public class User implements UserInterface {
     public boolean login(String givenUsername, String givenPassword) {
         if (givenUsername.equals(this.username) && givenPassword.equals(this.password)){
             this.isLogged = true;
-            System.out.println("User.User logged in succesfully!");
+            System.out.println(this.username+" logged in succesfully!");
             return true;
         }
         else{

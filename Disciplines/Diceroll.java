@@ -1,7 +1,11 @@
 package Disciplines;
 
-public class Diceroll {
-    public Diceroll(int odds){
-        super(odds);
+public class Diceroll extends AbstractDiscipline implements DisciplinesInterface{
+
+    public Diceroll(){
+    }
+    @Override
+    public int getTotalOdds() {
+        return 0;
     }
 }
