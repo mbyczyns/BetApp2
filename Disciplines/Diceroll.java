@@ -6,6 +6,6 @@ public class Diceroll extends AbstractDiscipline implements DisciplinesInterface
     }
     @Override
     public int getTotalOdds() {
-        return 0;
+        return totalOdds;
     }
 }

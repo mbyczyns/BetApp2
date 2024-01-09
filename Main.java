@@ -6,21 +6,32 @@ import java.util.Scanner;
 
 public class Main {
 
-    public void createUser(Scanner scanner, List<User> usersList){
+    public static void createUser(Scanner scanner, List<User> usersList) {
         System.out.println("Creating new user");
-        String givenUsername = scanner.nextLine();
+
         boolean correctUsername = false;
+        String givenUsername = "";
+
         while (!correctUsername) {
             System.out.print("Username: ");
+            givenUsername = scanner.nextLine();
+
+            // Check if the username already exists
+            boolean usernameExists = false;
             for (User tempUser : usersList) {
                 if (givenUsername.equals(tempUser.getUsername())) {
                     System.out.println("User already exists. Try another username.");
-                    correctUsername = false;
+                    usernameExists = true;
                     break;
-                } else correctUsername = true;
+                }
             }
 
+            if (!usernameExists) {
+                System.out.println("Username is good :)");
+                correctUsername = true;
+            }
         }
+
         System.out.print("Password: ");
         String password = scanner.nextLine();
         System.out.print("User ID: ");
@@ -28,8 +39,13 @@ public class Main {
         User user = new User(givenUsername, password, userID);
         usersList.add(user);
     }
+    public static void listUsers(List<User> userList){
+        for (User mini : userList){
+            System.out.println(mini.getUsername());
+        }
+    }
 
-    public void logIn(String userName, String password, int userID, List<User> usersList,Scanner scanner){
+    public static void logIn(List<User> usersList,Scanner scanner){
         boolean isLogged = false;
         while(!isLogged){
             System.out.print("Your username: ");
@@ -51,6 +67,8 @@ public class Main {
         User klient = new User("marcin","haslomaslo",112);
         usersList.add(klient);
         User klient2 = new User("olek", "123123",222);
-        usersList.add(klient2);
+        logIn(usersList, scanner);
     }
+
+
 }
