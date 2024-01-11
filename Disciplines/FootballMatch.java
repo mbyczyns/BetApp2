@@ -16,10 +16,10 @@ public class FootballMatch extends AbstractDiscipline implements DisciplinesInte
     private float winAodd = 3.0f;
     private float winBodd = 3.0f;
     private float drawOdd = 8.0f;
-    private float more4Odd;
-    private float more6Odd;
-    private float more8odd;
-    private float noGoalsOdd;
+    private float more4Odd = 1.5f;
+    private float more6Odd = 2.5f;
+    private float more8odd = 4.0f;
+    private float noGoalsOdd = 3.5f;
 
     public FootballMatch() {
         this.teamA = "Real Madrid";
@@ -44,31 +44,38 @@ public class FootballMatch extends AbstractDiscipline implements DisciplinesInte
         return teamBgoals;
     }
 
-    public boolean winA(int teamAgoals, int teamBgoals) {
-        return (teamBgoals < teamAgoals);
+    public float winA(int teamAgoals, int teamBgoals) {
+        if (teamBgoals < teamAgoals) return 3.0f;
+        else return 0;
     }
 
-    public boolean winB(int teamAgoals, int teamBgoals) {
-        return (teamBgoals > teamAgoals);
+    public float winB(int teamAgoals, int teamBgoals) {
+        if (teamBgoals > teamAgoals) return 3.0f;
+        else return 0;
     }
 
-    public boolean draw(int teamAgoals, int teamBgoals) {
-        return (teamBgoals == teamAgoals);
+    public float draw(int teamAgoals, int teamBgoals) {
+        if (teamBgoals == teamAgoals) return 8.0f;
+        else return 0;
     }
 
-    public boolean more4(int teamAgoals, int teamBgoals) {
-        return (teamBgoals + teamAgoals > 4);
+    public float more4(int teamAgoals, int teamBgoals) {
+        if (teamBgoals + teamAgoals > 4) return 1.5f;
+        else return 0;
     }
 
-    public boolean more6(int teamAgoals, int teamBgoals) {
-        return (teamBgoals + teamAgoals > 6);
+    public float more6(int teamAgoals, int teamBgoals) {
+        if (teamBgoals + teamAgoals > 6) return 2.5f;
+        else return 0;
     }
 
-    public boolean more8(int teamAgoals, int teamBgoals){
-        return (teamBgoals+teamAgoals>8);
+    public float more8(int teamAgoals, int teamBgoals){
+        if (teamBgoals+teamAgoals>8) return 4.0f;
+        else return 0;
     }
 
-    public boolean noGoals(int teamAgoals, int teamBgoals){
-        return (teamBgoals==0 || teamAgoals==0);
+    public float noGoals(int teamAgoals, int teamBgoals){
+        if (teamBgoals==0 || teamAgoals==0) return 3.5f;
+        else return 0;
     }
 }
