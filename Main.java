@@ -1,3 +1,4 @@
+import Disciplines.FootballMatch;
 import User.User;
 
 import java.util.ArrayList;
@@ -67,7 +68,12 @@ public class Main {
         User klient = new User("marcin","haslomaslo",112);
         usersList.add(klient);
         User klient2 = new User("olek", "123123",222);
-        logIn(usersList, scanner);
+        FootballMatch mecz = new FootballMatch();
+        System.out.println(mecz.getTeamA());
+        System.out.println(mecz.getTeamB());
+        System.out.println(mecz.getTeamAgoals());
+        System.out.println(mecz.getTeamBgoals());
+        System.out.println(mecz.draw(mecz.getTeamAgoals(), mecz.getTeamBgoals()));
     }
 
 

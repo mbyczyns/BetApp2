@@ -1,7 +1,7 @@
 FOOTBALL:
 - team A wins : 3,0
 - team B wins : 3,0
-- draw
+- draw : 8,0
 
 (maximum goals in match - 10)
 -more than 4 goals in match: 1,5
