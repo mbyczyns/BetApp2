@@ -1,7 +1,9 @@
+import Coupons.FootballCoupon;
 import Disciplines.Diceroll;
 import Disciplines.FootballMatch;
 import User.User;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -71,6 +73,7 @@ public class Main {
         User klient2 = new User("olek", "123123",222);
         usersList.add(klient2);
         FootballMatch mecz = new FootballMatch();
+        System.out.println(zmienna);
 
 
     }
