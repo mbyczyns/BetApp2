@@ -1,18 +1,8 @@
-## Getting Started
+Project Java - BetApp
+Marcin Byczyński L9, 155888
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+My project is an app similair to Betclic. It is called BetApp. You log in as a user, and you choose what discipline you want to bet. You put money (virtual) on a coupon, if all the bets you made on the coupon are correct, you win money, if the bets were wrong, you loose the money. Simple. There are 2 disciplines to choose from : Football match between FC Barcelona and Real Madrid, and a simple Diceroll. 
 
-## Folder Structure
+If I have enough time, I'm planning to implement a GUI.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Status : IN PROGRESS

@@ -13,13 +13,6 @@ public class FootballMatch extends AbstractDiscipline implements DisciplinesInte
     private String teamB;
     private int teamAgoals;
     private int teamBgoals;
-    private float winAodd = 3.0f;
-    private float winBodd = 3.0f;
-    private float drawOdd = 8.0f;
-    private float more4Odd = 1.5f;
-    private float more6Odd = 2.5f;
-    private float more8odd = 4.0f;
-    private float noGoalsOdd = 3.5f;
 
     public FootballMatch() {
         this.teamA = "Real Madrid";
