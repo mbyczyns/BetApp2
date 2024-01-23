@@ -69,8 +69,8 @@ public class Main {
         User klient = new User("marcin","haslomaslo",112);
         usersList.add(klient);
         User klient2 = new User("olek", "123123",222);
-    usersList.add(klient2);
-    FootballMatch mecz = new FootballMatch();
+        usersList.add(klient2);
+        FootballMatch mecz = new FootballMatch();
 
 
     }
