@@ -10,5 +10,31 @@ public class FootballCoupon  extends AbstractCoupon {
         super();
     }
 
+    public void checkCoupon(int Agoals, int Bgoals){
+        System.out.println(totalOdds);
+        for (String bet : betList){
+            switch (bet){
+                case "awin":
+                    //
+                case "bwin":
+                    //
+                case "draw":
+                    //
+                case "more4":
+                    //
+                case "more6":
+                    //
+                case "more8":
+                    //
+                case "nogoal":
+                    //
+                default:
+                    System.out.println("erroreoeoeoero");
+
+
+            }
+        }
+    }
+
 
 }

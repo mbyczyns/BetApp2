@@ -1,7 +1,5 @@
 package Coupons;
 
-import Disciplines.AbstractDiscipline;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,7 +37,4 @@ public abstract class AbstractCoupon {
         return totalOdds;
     }
 
-    public void setTotalOdds() {
-        this.totalOdds = 12.5f;
-    }
 }

@@ -1,11 +1,9 @@
 package Disciplines;
 
-public class Diceroll extends AbstractDiscipline implements DisciplinesInterface{
+public class Diceroll {
 
     public Diceroll(){
+
     }
-    @Override
-    public int getTotalOdds() {
-        return totalOdds;
-    }
+
 }

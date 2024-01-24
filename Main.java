@@ -75,7 +75,7 @@ public class Main {
         FootballMatch mecz = new FootballMatch();
         FootballCoupon kupon = new FootballCoupon();
         kupon.addBets(scanner);
-        kupon.getCoupon();
+        kupon.checkCoupon(mecz.getTeamAgoals(), mecz.getTeamBgoals());
 
     }
 
