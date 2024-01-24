@@ -7,24 +7,31 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class AbstractCoupon {
-    protected List<String> couponList = new ArrayList<>();
     protected float totalOdds;
+    protected List<String> betList = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
 
-    public AbstractCoupon(float totalOdds) {
+    public AbstractCoupon() {
         this.totalOdds = 1f;
+        this.betList = betList;
     }
 
-    public void addBets(List<String> couponList, Scanner scanner){
+     public void addBets(Scanner scanner){
         while(true){
             System.out.println("Give the keyword of the bet you want to add to your coupon. Remember, you can add only one bet from each category.");
             String bet = scanner.nextLine();
-            if (bet.equals("exit")) {
+            if (bet.equals("done")) {
                 break;
             }
             else{
-                couponList.add(bet);
+                betList.add(bet);
             }
+        }
+    }
+
+    public void getCoupon(){
+        for (String bet : betList){
+            System.out.println(bet);
         }
     }
 
