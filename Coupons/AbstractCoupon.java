@@ -27,10 +27,8 @@ public abstract class AbstractCoupon {
         }
     }
 
-    public void getCoupon(){
-        for (String bet : betList){
-            System.out.println(bet);
-        }
+    public List<String> getCoupon(){
+        return this.betList;
     }
 
     public float getTotalOdds() {

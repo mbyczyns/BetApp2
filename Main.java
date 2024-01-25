@@ -65,6 +65,11 @@ public class Main {
             if(!isLogged) System.out.println("User not found :( Try again.");
         }
     }
+    public static float makeBet(int money,FootballCoupon kupon, int Agoals, int Bgoals){
+        kupon.checkCoupon(Agoals,Bgoals);
+        return kupon.getTotalOdds()*money;
+    }
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         List<User> usersList = new ArrayList<>();
@@ -75,9 +80,6 @@ public class Main {
         FootballMatch mecz = new FootballMatch();
         FootballCoupon kupon = new FootballCoupon();
         kupon.addBets(scanner);
-        kupon.checkCoupon(mecz.getTeamAgoals(), mecz.getTeamBgoals());
-
+        System.out.println(kupon.getCoupon());
     }
-
-
 }

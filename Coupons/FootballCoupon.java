@@ -11,7 +11,6 @@ public class FootballCoupon  extends AbstractCoupon {
     }
 
     public void checkCoupon(int Agoals, int Bgoals){
-        System.out.println(totalOdds);
         for (String bet : betList){
             switch (bet){
                 case "awin":
