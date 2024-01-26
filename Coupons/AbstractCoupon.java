@@ -14,9 +14,9 @@ public abstract class AbstractCoupon {
         this.betList = betList;
     }
 
-     public void addBets(Scanner scanner){
+     public void addBets(){
         while(true){
-            System.out.println("Give the keyword of the bet you want to add to your coupon. Remember, you can add only one bet from each category.");
+            System.out.println("Give the keyword of the bet you want to add to your coupon. You can find the keywords of your bets in the file 'sports.txt'.");
             String bet = scanner.nextLine();
             if (bet.equals("done")) {
                 break;

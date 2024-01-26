@@ -5,7 +5,7 @@ public class DicerollCoupon extends AbstractCoupon {
         super();
     }
 
-    public void checkCoupon(int dice) {
+    public void checkDicerollCoupon(int dice) {
         for (String bet : betList) {
             switch (bet) {
                 case "more2":
@@ -49,10 +49,7 @@ public class DicerollCoupon extends AbstractCoupon {
                     else totalOdds *= 0;
                     break;
                 default:
-                    System.out.println("A wrong bet has been added. Sorry for your money :(");
                     totalOdds *= 0;
-
-
             }
         }
     }

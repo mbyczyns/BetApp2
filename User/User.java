@@ -4,7 +4,7 @@ public class User implements UserInterface {
     private int userID;
     private String username;
     private String password;
-    private int wallet;
+    private float wallet;
     private boolean isLogged;
 
     public User(String username, String password, int userID) {
@@ -44,7 +44,7 @@ public class User implements UserInterface {
     }
 
     @Override
-    public int getWallet() {
+    public float getWallet() {
         return wallet;
     }
 

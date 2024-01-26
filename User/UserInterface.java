@@ -5,9 +5,9 @@ public interface UserInterface {
 
     void logout();
 
-    int getWallet();
+    float getWallet();
 
-    void addMoney(int amount);
+    float addMoney(int amount);
 
     void takeMoney(int amount);
 

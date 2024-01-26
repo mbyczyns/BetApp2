@@ -9,7 +9,7 @@ FOOTBALL:
 -more than 6 goals in match: 2,5 (more6)
 -more than 8 goals in match: 4,0 (more8)
 
--one team doesn't loose a goal: 3,5 (nogoal)
+-ONE (or both) of the teams doesn't lose a goal: 3,5 (nogoal)
 
 -------------------------
 

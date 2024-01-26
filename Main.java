@@ -1,3 +1,4 @@
+import Coupons.DicerollCoupon;
 import Coupons.FootballCoupon;
 import Disciplines.Diceroll;
 import Disciplines.FootballMatch;
@@ -65,22 +66,46 @@ public class Main {
             if(!isLogged) System.out.println("User not found :( Try again.");
         }
     }
-    public static float makeBet(int money,FootballCoupon kupon, int Agoals, int Bgoals){
-        kupon.checkCoupon(Agoals,Bgoals);
+    public static float makeFootballBet(int money,FootballCoupon kupon, int Agoals, int Bgoals){
+        kupon.checkFootballCoupon(Agoals,Bgoals);
         return kupon.getTotalOdds()*money;
     }
+    public static float makeDicerollBet(float money, DicerollCoupon kupon,int diceResult){
+        kupon.checkDicerollCoupon(diceResult);
+        return kupon.getTotalOdds()*money;
+    }
+
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         List<User> usersList = new ArrayList<>();
-        User klient = new User("marcin","haslomaslo",112);
+        User klient = new User("user","password",112);
         usersList.add(klient);
-        User klient2 = new User("olek", "123123",222);
-        usersList.add(klient2);
         logIn(usersList, scanner);
-        FootballMatch mecz = new FootballMatch();
-        FootballCoupon kupon = new FootballCoupon();
-        kupon.addBets(scanner);
-        System.out.println(kupon.getCoupon());
+        System.out.println("Your wallet: "+ klient.getWallet());
+        System.out.println("What sport would you like to bet?");
+        System.out.println("1 - Football ");
+        System.out.println("2 - Diceroll :)");
+        int sportChoice = scanner.nextInt();
+        System.out.println("Now enter the amount of money you would like to put on your bet: ");
+        float money = scanner.nextFloat();
+            if (sportChoice==1){
+                FootballMatch mecz = new FootballMatch();
+                FootballCoupon kupon = new FootballCoupon();
+                kupon.addBets();
+                float potentialPrize = makeFootballBet(money,kupon, mecz.getTeamAgoals(), mecz.getTeamBgoals());
+                klient.takeMoney(money);
+                klient.addMoney(potentialPrize);
+            } else if (sportChoice==2) {
+                Diceroll rzut = new Diceroll();
+                DicerollCoupon kupon = new DicerollCoupon();
+                kupon.addBets();
+                makeDicerollBet(money,kupon, rzut.getDiceResult());
+                klient.takeMoney(money);
+            }
+            else{
+                System.out.println("wrong sport number :(");
+            }
+
     }
 }

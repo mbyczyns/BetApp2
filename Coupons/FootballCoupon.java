@@ -1,16 +1,11 @@
 package Coupons;
 
-import Disciplines.FootballMatch;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class FootballCoupon  extends AbstractCoupon {
     public FootballCoupon() {
         super();
     }
 
-    public void checkCoupon(int Agoals, int Bgoals){
+    public void checkFootballCoupon(int Agoals, int Bgoals){
         for (String bet : betList){
             switch (bet){
                 case "awin":
@@ -42,10 +37,7 @@ public class FootballCoupon  extends AbstractCoupon {
                     else totalOdds *= 0;
                     break;
                 default:
-                    System.out.println("A wrong bet has been added. Sorry for your money :(");
                     totalOdds*=0;
-
-
             }
         }
     }
