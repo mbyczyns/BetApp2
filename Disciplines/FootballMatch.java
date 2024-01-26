@@ -33,38 +33,4 @@ public class FootballMatch {
         return teamBgoals;
     }
 
-//    public float winA(int teamAgoals, int teamBgoals) {
-//        if (teamBgoals < teamAgoals) return 3.0f;
-//        else return 0;
-//    }
-//
-//    public float winB(int teamAgoals, int teamBgoals) {
-//        if (teamBgoals > teamAgoals) return 3.0f;
-//        else return 0;
-//    }
-//
-//    public float draw(int teamAgoals, int teamBgoals) {
-//        if (teamBgoals == teamAgoals) return 8.0f;
-//        else return 0;
-//    }
-//
-//    public float more4(int teamAgoals, int teamBgoals) {
-//        if (teamBgoals + teamAgoals > 4) return 1.5f;
-//        else return 0;
-//    }
-//
-//    public float more6(int teamAgoals, int teamBgoals) {
-//        if (teamBgoals + teamAgoals > 6) return 2.5f;
-//        else return 0;
-//    }
-//
-//    public float more8(int teamAgoals, int teamBgoals){
-//        if (teamBgoals+teamAgoals>8) return 4.0f;
-//        else return 0;
-//    }
-//
-//    public float noGoals(int teamAgoals, int teamBgoals){
-//        if (teamBgoals==0 || teamAgoals==0) return 3.5f;
-//        else return 0;
-//    }
 }

@@ -9,7 +9,7 @@ public interface UserInterface {
 
     void addMoney(int amount);
 
-    void cashOut(int amount);
+    void takeMoney(int amount);
 
     String getUsername();
 

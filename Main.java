@@ -77,6 +77,7 @@ public class Main {
         usersList.add(klient);
         User klient2 = new User("olek", "123123",222);
         usersList.add(klient2);
+        logIn(usersList, scanner);
         FootballMatch mecz = new FootballMatch();
         FootballCoupon kupon = new FootballCoupon();
         kupon.addBets(scanner);

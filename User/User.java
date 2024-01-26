@@ -58,8 +58,10 @@ public class User implements UserInterface {
         wallet+=amount;
     }
 
+
+
     @Override
-    public void cashOut(int amount) {
+    public void takeMoney(int amount) {
         wallet-=amount;
     }
 
