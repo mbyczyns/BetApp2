@@ -17,6 +17,7 @@ public abstract class AbstractCoupon {
      public void addBets(){
         while(true){
             System.out.println("Give the keyword of the bet you want to add to your coupon. You can find the keywords of your bets in the file 'sports.txt'.");
+            System.out.println("When you have finalized your coupon, type 'done' ");
             String bet = scanner.nextLine();
             if (bet.equals("done")) {
                 break;
