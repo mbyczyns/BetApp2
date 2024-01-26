@@ -70,21 +70,21 @@ public class Main {
             if(!isLogged) System.out.println("User not found :( Try again.");
         }
     }
-    public static float makeFootballBet(float money,FootballCoupon kupon, int Agoals, int Bgoals){
-        kupon.checkFootballCoupon(Agoals,Bgoals);
-        return kupon.getTotalOdds()*money;
+    public static float makeFootballBet(float money,FootballCoupon coupon, int Agoals, int Bgoals){
+        coupon.checkFootballCoupon(Agoals,Bgoals);
+        return coupon.getTotalOdds()*money;
     }
-    public static float makeDicerollBet(float money, DicerollCoupon kupon,int diceResult){
-        kupon.checkDicerollCoupon(diceResult);
-        return kupon.getTotalOdds()*money;
+    public static float makeDicerollBet(float money, DicerollCoupon coupon,int diceResult){
+        coupon.checkDicerollCoupon(diceResult);
+        return coupon.getTotalOdds()*money;
     }
 
 
     public static void main(String[] args) {
         Scanner scanner1 = new Scanner(System.in);
         List<User> usersList = new ArrayList<>();
-        User klient = new User("user", "password", 112);
-        usersList.add(klient);
+        User customer = new User("user", "password", 112);
+        usersList.add(customer);
         System.out.printf("Do you want to log in as an existing user (type 1), or do you want to create a new user account? (type 2)");
         int loggingChoice = scanner1.nextInt();
         if (loggingChoice==1){
@@ -96,7 +96,7 @@ public class Main {
         while (true) {
             System.out.println("----------------");
             System.out.println();
-            System.out.println("Your wallet: " + klient.getWallet());
+            System.out.println("Your wallet: " + customer.getWallet());
             System.out.println("What sport would you like to do?");
             System.out.println("1 - Bet on Football ");
             System.out.println("2 - Bet on Diceroll :)");
@@ -107,18 +107,18 @@ public class Main {
             if (sportChoice == 1) {
                 System.out.println("Now enter the amount of money you would like to put on your bet: ");
                 float money = scanner1.nextFloat();
-                FootballMatch mecz = new FootballMatch();
-                FootballCoupon kupon = new FootballCoupon();
-                kupon.addBets();
-                float potentialPrize = makeFootballBet(money, kupon, mecz.getTeamAgoals(), mecz.getTeamBgoals());
-                klient.takeMoney(money);
+                FootballMatch match = new FootballMatch();
+                FootballCoupon coupon = new FootballCoupon();
+                coupon.addBets();
+                float potentialPrize = makeFootballBet(money, coupon, match.getTeamAgoals(), match.getTeamBgoals());
+                customer.takeMoney(money);
                 System.out.println("Your bets:");
-                for (String bet : kupon.getCoupon()){
+                for (String bet : coupon.getCoupon()){
                     System.out.println(bet);
                 }
                 System.out.println();
                 System.out.println("Match results:");
-                System.out.println("Real Madrid "+ mecz.getTeamAgoals() + " - " +mecz.getTeamBgoals() + " Barcelona");
+                System.out.println("Real Madrid "+ match.getTeamAgoals() + " - " +match.getTeamBgoals() + " Barcelona");
                 if (potentialPrize > 0 ){
                     System.out.println("Congratulations! You won! Your prize: "+ potentialPrize);
                 }
@@ -126,23 +126,23 @@ public class Main {
                     System.out.println("Sorry, you lost :(");
                 }
                 System.out.println();
-                klient.addMoney(potentialPrize);
+                customer.addMoney(potentialPrize);
             } else if (sportChoice == 2) {
                 System.out.println("Now enter the amount of money you would like to put on your bet: ");
                 float money = scanner1.nextFloat();
-                Diceroll rzut = new Diceroll();
+                Diceroll throwDice = new Diceroll();
                 DicerollCoupon kupon = new DicerollCoupon();
                 kupon.addBets();
-                float potentialPrize = makeDicerollBet(money, kupon, rzut.getDiceResult());
-                klient.takeMoney(money);
-                klient.addMoney(potentialPrize);
+                float potentialPrize = makeDicerollBet(money, kupon, throwDice.getDiceResult());
+                customer.takeMoney(money);
+                customer.addMoney(potentialPrize);
             } else if (sportChoice ==3){
                 System.out.println("How much money would you like to add to your wallet?");
-                klient.addMoney(scanner1.nextFloat());
+                customer.addMoney(scanner1.nextFloat());
             }
             else if (sportChoice ==4) {
                 System.out.println("How much money would you like to cash out?");
-                klient.takeMoney(scanner1.nextFloat());
+                customer.takeMoney(scanner1.nextFloat());
             }
             else if (sportChoice ==5){
                 System.out.println("Exiting ...");
