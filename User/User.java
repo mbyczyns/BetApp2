@@ -54,14 +54,12 @@ public class User implements UserInterface {
     }
 
     @Override
-    public void addMoney(int amount) {
+    public void addMoney(float amount) {
         wallet+=amount;
     }
 
-
-
     @Override
-    public void takeMoney(int amount) {
+    public void takeMoney(float amount) {
         wallet-=amount;
     }
 

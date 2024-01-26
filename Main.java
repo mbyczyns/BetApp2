@@ -66,7 +66,7 @@ public class Main {
             if(!isLogged) System.out.println("User not found :( Try again.");
         }
     }
-    public static float makeFootballBet(int money,FootballCoupon kupon, int Agoals, int Bgoals){
+    public static float makeFootballBet(float money,FootballCoupon kupon, int Agoals, int Bgoals){
         kupon.checkFootballCoupon(Agoals,Bgoals);
         return kupon.getTotalOdds()*money;
     }

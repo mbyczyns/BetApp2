@@ -7,9 +7,9 @@ public interface UserInterface {
 
     float getWallet();
 
-    float addMoney(int amount);
+    void addMoney(float amount);
 
-    void takeMoney(int amount);
+    void takeMoney(float amount);
 
     String getUsername();
 
