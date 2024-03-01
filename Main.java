@@ -140,6 +140,13 @@ public class Main {
                     DicerollCoupon kupon = new DicerollCoupon();
                     kupon.addBets();
                     float potentialPrize = makeDicerollBet(money, kupon, throwDice.getDiceResult());
+                    System.out.println("Dice throw result:");
+                    System.out.println(throwDice.getDiceResult());
+                    if (potentialPrize > 0) {
+                        System.out.println("Congratulations! You won! Your prize: " + potentialPrize);
+                    } else {
+                        System.out.println("Sorry, you lost :(");
+                    }
                     customer.takeMoney(money);
                     customer.addMoney(potentialPrize);
                 }
